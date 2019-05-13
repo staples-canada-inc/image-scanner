@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./lib/css/staples-ds.css" />
+    <link rel="stylesheet" href="./lib/css/styles.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-lightest-grey py-3 ">
+        <a class="navbar-brand" href="#"><img src="./lib/img/Staples_Logo_EN.svg" alt="Staples Logo" class="w-50" />
+            <h4 class="d-inline border-left border-dark py-1 ml-3 px-3">Image Tester</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="mailto:brian.caicco@staples.ca">Contact Developer</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-5 pt-5 text-center">
+                <h2 style="display: none;" id="complete-message">Scan Complete</h2>
+                <h2 class="" id="title">Image Size Scanner</h2>
+                <p class="" id="instructions">Click or Drag and drop the .csv file you'd like to scan onto "the Upload" File Button Below. When complete, a download will start automatically.</p>
+                <div id="restart-btn"></div>
+                <span class="spinner-border text-secondary" id="spinner" role="status" aria-hidden="true" style=" visibility: hidden;"></span>
+                <div class='btn btn-primary upload-field mb-5' id="upload-btn">
+                    <input type="file" id="files" name="files[]" multiple="multiple" />
+                    Upload File
+                </div>
+                <div class="row mb-5" id="header-example">
+                    <h3 class="mb-3">Please ensure your .csv file includes the following headings</h3>
+                    <!-- Table head options-->
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Sku_No</th>
+                                <th scope="col">Image1</th>
+                                <th scope="col">Image1_Size</th>
+                                <th scope="col">Image1_Pixel1</th>
+                                <th scope="col">Image1_Pixel2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">2749498</th>
+                                <td>m006989341</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2749498</th>
+                                <td>m006989333</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2749531</th>
+                                <td>m006989328</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./lib/js/jquery-3.3.1.slim.js"></script>
+    <script src="./lib/js/progressbar.js"></script>
+    <script src="./lib/js/_helpers.js"></script>
+    <script src="./lib/js/papaparse.min.js"></script>
+    <script src="./lib/js/img-lookup5.js"></script>
+
+</body>
+
+</html>
